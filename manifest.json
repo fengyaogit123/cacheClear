@@ -1,0 +1,26 @@
+{
+  "name": "fyCacheClear",
+  "manifest_version": 2,
+  "version": "0.1",
+  "description": "清除浏览器缓存",
+  "author": "fengyao",
+
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+  "browser_action": {
+    "default_icon": "icon16.png",
+    "default_title": "clearCache"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "web_accessible_resources": ["icon48.png"],
+  "permissions": ["browsingData", "tabs", "notifications"],
+  "commands": {
+    "cleanKey": {
+      "suggested_key": { "default": "Alt+C" },
+      "description": "clean cache key"
+    }
+  }
+}
